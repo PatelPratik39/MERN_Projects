@@ -40,3 +40,99 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* App.css */
+
+/* .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 14px 16px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  color: white;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 0;
+} */
+
+/* App.css */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  z-index: 2;
+  
+}
+
+
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5394e8; /* Rainbow color */
+  color: white;
+  /* padding: 20px; */
+}
+
+img {
+  max-width: 80%;
+  max-height: 60%;
+  margin-bottom: 10px;
+}
+
+h2,
+p {
+  margin: 0;
+  text-align: center;
+}
+
